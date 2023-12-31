@@ -1,0 +1,157 @@
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{ragged2e}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\input{glyphtounicode}
+
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05}  
+\usepackage[T1]{fontenc}
+
+\pagestyle{fancy}
+\fancyhf{}  
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\footskip}{5pt}
+
+
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+
+\pdfgentounicode=1
+
+
+\newcommand{\cvitem}[1]{
+  \item\small{
+    {#1\vspace{-2pt}}
+  }
+}
+
+\newcommand{\cvheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \small#3 & \small #4 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\cvheadingstart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\cvheadingend}{\end{itemize}}
+\newcommand{\cvitemstart}{\begin{itemize}\justifying}
+\newcommand{\cvitemend}{\end{itemize}\vspace{-5pt}}
+
+\newcommand{\cvskill}[2]{
+  \textcolor{black}{\textbf{#1}}\hfill
+  \foreach \x in {1,...,5}{%
+    \space{\ifnumgreater{\x}{#2}{\color{black!80!white!20}}{\color{black}}\faSquare}}\par%
+  \vspace{-2pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\footnotesize$\bullet$}}$}
+
+\begin{document}
+
+
+%\renewcommand{\familydefault}{\sfdefault}
+
+\begin{center}
+  \textbf{\LARGE\scshape FONSECA ABDERRAHMAN} \\
+  \vspace{1pt}\small
+  \href{mailto:abdou.fonseca78@gmail.com}{abdou.fonseca78@gmail.com}
+  $\ \diamond\ $ 
+  06-51-44-46-71
+  $\ \diamond\ $
+  18 ans
+  $\ \diamond\ $
+  Etudiant
+\end{center}
+
+\section{Experience Professionelle}
+\cvheadingstart
+  \cvheading
+    {Bertrandt}{Velizy, 78140}
+    {Stage d'observation}{05/2018 }
+  \cvitemstart
+    \cvitem{Description:
+    Entreprise basée sur la conception de pièces automobile }
+  \cvitemend
+
+  \cvheading
+    {Envergure}{Paris, 75012}
+    {Formation Sécurité Pour les Grands Evenements}{12/2023 - 01/2024}
+  \cvitemstart
+    \cvitem{Cette formation de 106 heures 
+    permet d'assurer la sécurité pour les evenements de plus de 300 personnes}
+  \cvitemend
+
+
+\cvheadingend
+
+\section{Cursus académique}
+\cvheadingstart
+  \cvheading
+    {Collège la Clef Saint Pierre}{Elancourt, 78990}
+    {Brevet des Collèges}{07/2018 }
+  \cvheading
+    {Lycée Dumont D'Urville}{Maurepas, 78310}
+    {Baccalaureat Générale}{07/2021}
+\cvheadingend
+
+\section{Langues}
+\cvskill{Anglais}{4}
+\cvskill{Espagnole}{3}
+\cvskill{Arabe (Litteraire)}{3}
+\cvskill{Japonais}{2}
+\vspace{-5pt}
+
+
+\section{Languages}
+\cvskill{Python}{5}
+\cvskill{C}{3}
+\cvskill{Racket}{3}
+\vspace{-5pt}
+
+
+\section{Centre d'intérêts}
+\cvheadingstart
+\item
+\cvitemstart
+  \cvitem{Sport : Football / MMA / Basketball}
+  \cvitem{Voyage}
+  \cvitem{Manga}
+  \cvitem{Jeux Vidéos}
+\cvitemend
+
+\cvheadingend
+
+\end{document}
